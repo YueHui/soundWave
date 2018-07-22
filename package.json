@@ -1,0 +1,12 @@
+{
+  "name": "soundwave",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel watch index.html --no-hmr --no-autoinstall",
+    "build": "NODE_ENV=production parcel build index.html"
+  },
+  "author": "",
+  "license": "ISC"
+}
