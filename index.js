@@ -10,13 +10,16 @@ let canvas = document.querySelector("canvas");
 let canvasCtx = canvas.getContext("2d");
 
 function visualize() {
-    WIDTH = canvas.width;
-    HEIGHT = canvas.height;
+
+    const canvasWidth = canvas.width;
+    const canvasHeight = canvas.height;
 
     analyser.fftSize = 2048;
     var bufferLength = analyser.frequencyBinCount; // half the FFT value
     var dataArray = new Uint8Array(bufferLength); // create an array to store the data
     analyser.getByteFrequencyData(dataArray);
+
+    let rectWidth = canvasWidth/dataArray.length
 
     console.log(dataArray); 
 }  
