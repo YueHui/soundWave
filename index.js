@@ -1,5 +1,9 @@
 let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-let audio = document.querySelector("audio");
+//let audio = document.querySelector("audio");
+const audio = new Audio();
+audio.preload = true;
+audio.src = "https://static.kongyuehui.com/mp3/zhidaoyongyuan.mp3";
+audio.play();
 let source = audioCtx.createMediaElementSource(audio);
 let analyser = audioCtx.createAnalyser();
 
@@ -108,11 +112,3 @@ function visualize() {
 }  
 
 visualize();
-
-
-
-// try if it works
-//console.log(gradientColors('#00ff00', '#ff0000', 100));
-
-// 泥萌的新需求
-//console.log(gradientColors('#000', '#fff', 100, 2.2));
